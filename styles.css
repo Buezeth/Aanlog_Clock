@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: wheat;
+    font-weight: 700;
+    font-family: cursive;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-circle {
+    /* position: relative; */
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px lightblue;
+}
+
+.inner-circle {
+    /* position: relative; */
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: rgb(178, 215, 228);
+    border: 2px solid rgb(104, 205, 238);
+    box-shadow: 0px 0px 5px lightblue;
+
+    /* display: grid; */
+}
+
+.water-mark {
+    position: relative;
+    text-align: center;
+    opacity: 0.2;
+    width: 6rem;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+
+}
+
+.clock-digits {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+
+.center-dot {
+    width: 20px;
+    height: 20px;
+    background: rgb(183, 183, 209);
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(183, 183, 209, 0.685);
+    z-index: 5;
+}
+
+.seconds-hand .hand, .minutes-hand .hand, .hours-hand .hand {
+    position: relative;
+    inset: 0;
+    margin: auto;
+    background: white;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+.seconds-hand, .minutes-hand, .hours-hand {
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    margin: auto;
+}
+
+.seconds-hand {
+    width: 325px;
+    height: 325px;
+
+    /*Use This to Show user where the digits should go*/
+
+    /* background: blue; */
+    /* border: 2px solid black; */
+    z-index: 4;
+}
+
+.seconds-hand .hand {
+    height: 50%;
+    width: 3px;
+}
+
+.minutes-hand {
+    width: 300px;
+    height: 300px;
+    z-index: 3;
+    /* background: black; */
+}
+
+.minutes-hand .hand {
+    height: 50%;
+    width: 6px;
+    /* background: rgb(61, 60, 60); */
+}
+
+.hours-hand {
+    width: 250px;
+    height: 250px;
+    z-index: 2;
+    /* background: black; */
+}
+
+.hours-hand .hand {
+    height: 50%;
+    width: 9px;
+    /* background: rgb(19, 19, 19); */
+}
+
+.digits {
+    text-align: center;
+    position: relative;
+}
+
+.one {
+    grid-column: 6;
+    grid-row: 2;
+    right: 25px;
+    bottom: 15px;
+}
+.two {
+    grid-column: 7;
+    grid-row: 3;
+    right: 21px;
+    bottom: 10px;
+}
+.three {
+    grid-column: 7;
+    grid-row: 4;
+    inset: 0;
+    margin: auto;
+}
+.four {
+    grid-column: 7;
+    grid-row: 5;
+    top: 45px;
+    right: 21px;
+}
+.five {
+    grid-column: 6;
+    grid-row: 6;
+    top: 50px;
+    right: 25px;
+}
+.six {
+    grid-column: 4;
+    grid-row: 7;
+    inset: 0;
+    margin: auto;
+}
+.seven {
+    grid-column: 2;
+    grid-row: 6;
+    top: 50px;
+    left: 25px;
+}
+.eight {
+    grid-column: 1;
+    grid-row: 5;
+    top: 45px;
+    left: 21px;
+}
+.nine {
+    grid-column: 1;
+    grid-row: 4;
+    inset: 0;
+    margin: auto;
+}
+.ten {
+    grid-column: 1;
+    grid-row: 3;
+    left: 21px;
+    bottom: 10px;
+}
+.eleven {
+    grid-column: 2;
+    grid-row: 2;
+    left: 25px;
+    bottom: 15px;
+}
+.twelve {
+    grid-column: 4;
+    grid-row: 1;
+    inset: 0;
+    margin: auto;
+}
